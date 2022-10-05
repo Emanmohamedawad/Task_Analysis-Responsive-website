@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Roboto:wght@500&display=swap');
+
+:root{
+    --blue:#0A6D9A;
+    --gray:#737F96;
+    --bluegray:#0A2540;
+    --black:#000000;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+
+}
+p
+{
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.text-blue
+{
+    font-size: 1.2rem;
+    color: var(--blue);
+}
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul
+{
+    list-style: none;
+}
+
+.arrow-right svg
+{
+    margin-left: .5rem;
+}
+.arrow-right:hover .chevron-right{
+    display: none;
+    color: #fff;
+}
+.arrow-right:hover .arrow-right{
+    display: inline-block !important;
+}
+/* ===========================================================nav style =========================================================*/
+header{
+    background: #fff;
+    box-shadow: 0px 5px 26px #E0EFFD;
+    z-index: 999;
+}
+header .navbar
+{
+    padding: 1.5rem 0 1.5rem 0;
+    z-index: 999;
+}
+.logo{
+    font-size: 2rem;
+    color:var(--black);
+    text-decoration: none;
+    width: auto;
+    font-weight: bold;
+}
+.logo:hover{
+    color:var(--black);
+}
+.logo span{
+    color:var(--blue);
+}
+
+.btn-header
+{
+    display: inline-block;
+    padding: 0.2rem 1.5rem;
+    border-radius: 5rem;
+    background: var(--blue);
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    color:#fff;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+.btn-header:hover
+{
+    background-color: var(--bluegray);
+    color: #fff;
+}
+.btn-done{
+ width: 100%;
+ margin-left: 0 !important;
+}
+
+header input{
+    display: none;
+}
+header label{
+    font-size: 3rem;
+    color:var(--blue);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+header .link-box-right
+{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: start;
+}
+.sign-up-smart
+{
+    margin-bottom: 1rem;
+}
+.sign-up-smart a
+{
+    color: var(--blue) !important;
+    text-decoration: underline !important;
+}
+/* main-section  */
+.main-section
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: hidden;
+}
+.div-circle-right
+{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    background: linear-gradient(-45deg, #D9E8EF, #e4f5fc, #D9E8EF); 
+    top: -86px;
+    right: -65px;
+    border-radius: 50%;
+    z-index: -1;
+    animation: change  5s ease-in-out infinite ,
+    circle 5s linear infinite;
+}
+.div-circle-left
+{
+    position: absolute;
+    width: 21rem;
+    height: 21rem;
+    border-top: 18px solid #e4f5fc;
+    border-right: 18px solid #DEF2FB;
+    border-bottom: 18px solid #e4f5fc;
+    border-left: 18px solid #DEF2FB;
+    bottom: -136px;
+    left: -134px;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: transparent;
+    animation: circle 5s linear infinite;
+
+}
+@keyframes change
+{
+    0%{
+        background-position: 0 50% ;
+    }
+    50%{
+        background-position: 100% 50% ;
+    }
+    100%{
+        background-position: 0 50% ;
+    }
+}
+@keyframes circle
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.main-section-header 
+{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.login
+{
+    background-color: #fff;
+    box-shadow: 0px 0px 35px -15px var(--blue);
+    width: 45%;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 22px;
+}
+.input-feuld input::placeholder{
+    color: #CCCCCC;
+}
+.input-feuld
+{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-feuld-link
+{
+    position: relative;
+}
+.input-feuld label
+{
+    font-size: 1.2rem;
+    text-align: start;
+    margin-right: .5rem;
+}
+.input-feuld input
+{
+    font-size: 1.2rem;
+    color: #cccc;
+    padding: .5rem;
+    border-radius: 15px;
+    padding-left: 1.5rem;
+    border: 2px solid #cccc;
+    margin-right: .5rem;
+    background-color: transparent;
+}
+.input-feuld a
+{
+    text-align: end;
+    position: absolute;
+    right: 0;
+    bottom: .6rem;
+    font-size: 1rem;
+    margin-right: 1.8rem;
+}
+.btn-login
+{
+    display: inline-block;
+    padding: 0.2rem 1.5rem;
+    border-radius: 5rem;
+    background: var(--blue);
+    font-size: 1.2rem;
+    color:#fff;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-bottom: 2rem;
+}
+
+.line
+{
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 1.5rem;
+}
+.sign-in-with
+{
+    margin-top: -12px;
+    background-color: #fff;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.google-sin-in
+{
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 3rem;
+}
+.google-sin-in span
+{
+    border: 1px solid #cccc;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 22px;
+    width: 7rem;
+    cursor: pointer;
+}
+/* password-page */
+.main-section-password{
+    padding: 2.3rem;
+}
+.login-password-inpux .btn-login
+{
+    background-color: #cccc;
+    color: #000;
+    margin-top: 2rem;
+}
+.login-password-inpux .btn-login:hover{
+    background-color: var(--blue);
+    color: white;
+}
+.main-section-reset-password .text-blue
+{
+    color: #cccc;
+}
+/* 500 Media Query */
+@media only screen and (max-width: 890px) {
+    .login
+    {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 642px) {
+    .login
+    {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 478px) {
+    .login
+    {
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        text-align: center;
+        padding: .5rem;
+        border-radius: 10px;
+    }
+
+    .sign-up-smart a {
+        color: var(--blue) !important;
+        text-decoration: underline !important;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .input-feuld label {
+        font-size: 0.9rem;
+        text-align: start;
+        margin-right: 0.5rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    .main-section-header {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .login
+    {
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        text-align: center;
+        padding: .5rem;
+        border-radius: 10px;
+    }
+    .input-feuld label {
+        font-size: 0.8rem;
+        text-align: start;
+        margin-right: 0.5rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    .sign-up-smart a {
+        color: var(--blue) !important;
+        text-decoration: underline !important;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .main-section-header {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .input-feuld input::placeholder
+    {
+        font-size: 0.8rem;
+    }
+    .btn-done {
+        width: 100%;
+        font-size: 1rem;
+        margin-left: 0 !important;
+    }
+        .input-feuld a
+    {
+        text-align: end;
+        position: absolute;
+        right: 0;
+        bottom: .8rem;
+        font-size: .8rem;
+        margin-right: 1.8rem;
+    }
+    .input-feuld label {
+        font-size: 0.9rem;
+        text-align: start;
+        margin-right: 0.5rem;
+    }
+    .main-section-header h3{
+        font-size: 1.2rem;
+    }
+}
+
